@@ -29,22 +29,7 @@ def convert_objects_to_strings(data_frame: pd.DataFrame) -> pd.DataFrame:
             data_frame.loc[:, col] = data_frame.loc[:, col].astype('string')
     return data
 
-#print(data)
-#data = pd.json_normalize(data)
-
-
-
-#establish connection to S
-
-
-DRIVER = 'ODBC Driver 17 for SQL Server'
-SERVER ='DESKTOP-4Q0I2G0\\SQLEXPRESS'
-DATABASE = 'twelve'
-
-conn = odbc.connect('DRIVER={ODBC Driver 17 for SQL Server} ; \
-                   SERVER=' + SERVER + ';\
-                   DATABASE=' + DATABASE + ';\
-                   Trusted_Connection=yes;')
+#establish connection to SQL
 
 
 engine = sqlalchemy.create_engine(f'mssql+pyodbc://DESKTOP-4Q0I2G0\\SQLEXPRESS/twelve?trusted_connection=yes&driver=ODBC Driver 17 for SQL Server')
