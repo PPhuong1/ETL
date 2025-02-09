@@ -26,9 +26,8 @@ query = {
     "jql" : "project = BID"
 }
 
-response=requests.get(url, params=query,  auth=('minh.grace95@gmail.com', 'token here'))
-#response=response.json()
-  # response=pd.json_normalize(response)
+response=requests.get(url, params=query,  auth=('email5@gmail.com', 'token here'))
+
 response = response.json()
 
 
