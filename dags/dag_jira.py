@@ -1,8 +1,6 @@
 
 from airflow import DAG
 from airflow.operators.python import PythonOperator
-from airflow.utils.dates import days_ago
-from airflow.providers.http.sensors.http import HttpSensor
 
 import os
 from io import StringIO
@@ -14,7 +12,6 @@ import sqlalchemy
 
 import json
 import requests
-from jira import JIRA
 import boto3
 
 headers ={
