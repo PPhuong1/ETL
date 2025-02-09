@@ -26,7 +26,7 @@ query = {
     "jql" : "project = BID"
 }
 
-response=requests.get(url, params=query,  auth=('email5@gmail.com', 'token here'))
+response=requests.get(url, params=query,  auth=('email@gmail.com', 'token here'))
 
 response = response.json()
 
