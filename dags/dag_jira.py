@@ -21,14 +21,12 @@ headers ={
     "Accept": "application/json",
     "Content/Type": "application/json"
 }
-auth_jira = JIRA('https://bidev.atlassian.net', basic_auth=('minh.grace95@gmail.com', 'ATATT3xFfGF0enP-hFsCK-vJMAXyhOmItUXFWx_wF9QLrYeBWRvki9ArwqCHR1ZOEJYJBfrLADIqxWugP0NS8-yPqTPmxnYEQgCtDQ4C2oj6i7T0dgz80Vp1mUovFhZrL34d3gb3PqmUQGTghM5i7AVHQ_AwH0_LOw-MP1Zed87gv6XIece6ZlI=F64DC9A7'))
-#api_url = f"{url}?jql=project={project_key}"
 url ="https://bidev.atlassian.net/rest/api/3/search"
 query = {
     "jql" : "project = BID"
 }
 
-response=requests.get(url, params=query,  auth=('minh.grace95@gmail.com', 'ATATT3xFfGF0enP-hFsCK-vJMAXyhOmItUXFWx_wF9QLrYeBWRvki9ArwqCHR1ZOEJYJBfrLADIqxWugP0NS8-yPqTPmxnYEQgCtDQ4C2oj6i7T0dgz80Vp1mUovFhZrL34d3gb3PqmUQGTghM5i7AVHQ_AwH0_LOw-MP1Zed87gv6XIece6ZlI=F64DC9A7'))
+response=requests.get(url, params=query,  auth=('minh.grace95@gmail.com', 'token here'))
 #response=response.json()
   # response=pd.json_normalize(response)
 response = response.json()
